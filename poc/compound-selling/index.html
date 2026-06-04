@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Selling — Clearskies</title>
+
+<!-- Discoverability -->
+<meta name="description" content="Compound selling: the AI-native revenue philosophy where every customer interaction makes the next one easier — not harder. Built on the Clearskies context layer for revenue AI.">
+<link rel="canonical" href="https://clearskies.cc/compound-selling">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://clearskies.cc/compound-selling">
+<meta property="og:title" content="Compound Selling — Clearskies">
+<meta property="og:description" content="Every customer interaction should make the next one easier. The context layer that makes revenue knowledge compound instead of evaporate.">
+<meta property="og:site_name" content="Clearskies">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compound Selling — Clearskies">
+<meta name="twitter:description" content="Selling that compounds. The context layer for revenue AI.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Compound Selling",
+  "description": "The AI-native revenue philosophy where every customer interaction makes the next one easier — not harder.",
+  "publisher": { "@type": "Organization", "name": "Clearskies", "description": "The context layer for revenue AI. Built by the team behind Scratchpad." },
+  "mainEntity": { "@type": "SoftwareApplication", "name": "Clearskies", "applicationCategory": "BusinessApplication", "description": "The context layer that gives any AI a complete, identity-resolved picture of every customer." }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f5ef;
+    --ink:#1a1a17;
+    --ink-soft:#3d3d38;
+    --muted:#6b6b62;
+    --green:#0a6e4c;
+    --rule:#d8d3c4;
+    --rule-soft:#e7e2d5;
+    --serif:'Newsreader','Times New Roman',Georgia,serif;
+    --sans:'Inter',-apple-system,ui-sans-serif,system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 48px;}
+  @media(max-width:640px){.wrap{padding:0 24px;}}
+  .label{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:2.2px;text-transform:uppercase;color:var(--green);}
+
+  /* Nav */
+  nav{border-bottom:1px solid var(--rule);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:22px;padding-bottom:22px;}
+  .logo{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:21px;font-weight:500;letter-spacing:-0.01em;}
+  .logo .mark{width:19px;height:19px;color:var(--green);animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.55;}}
+  .nav-links{display:flex;align-items:center;gap:30px;}
+  .nav-links a{font-size:14px;color:var(--ink-soft);transition:color .2s;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-cta{border:1px solid var(--ink);padding:9px 18px;color:var(--ink)!important;transition:all .2s;}
+  .nav-cta:hover{background:var(--ink);color:var(--bg)!important;}
+  @media(max-width:720px){.nav-links a:not(.nav-cta){display:none;}}
+
+  /* Hero */
+  .hero{padding:120px 0 64px;}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(52px,8.4vw,92px);line-height:1.02;letter-spacing:-0.02em;margin:32px 0 36px;max-width:14ch;}
+  .hero h1 em{font-style:normal;color:var(--green);}
+  .hero .lede{font-family:var(--serif);font-size:clamp(20px,2.6vw,25px);line-height:1.5;color:var(--ink-soft);max-width:34ch;margin-bottom:44px;}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{font-family:var(--sans);font-size:14px;padding:13px 24px;transition:all .2s;cursor:pointer;border:1px solid var(--ink);}
+  .btn-solid{background:var(--ink);color:var(--bg);}
+  .btn-solid:hover{background:#000;}
+  .btn-out{background:transparent;color:var(--ink);}
+  .btn-out:hover{background:var(--ink);color:var(--bg);}
+  @media(max-width:640px){.hero{padding:64px 0 48px;}}
+
+  /* Intro standfirst */
+  .standfirst{padding-bottom:96px;}
+  .standfirst .inner{border-left:2px solid var(--green);padding:6px 0 6px 28px;max-width:680px;}
+  .standfirst p{font-family:var(--serif);font-size:21px;line-height:1.6;color:var(--ink-soft);}
+  .standfirst .meta{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:20px;font-style:normal;}
+
+  /* Two-column section (Every-style: heading rail + body) */
+  section.block{padding:80px 0;border-top:1px solid var(--rule);}
+  .sec{display:grid;grid-template-columns:280px minmax(0,1fr);gap:72px;align-items:start;}
+  @media(max-width:860px){.sec{grid-template-columns:1fr;gap:28px;}}
+  .sec-head{position:sticky;top:32px;}
+  @media(max-width:860px){.sec-head{position:static;}}
+  .sec-head .label{display:block;margin-bottom:20px;}
+  .sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.6vw,42px);line-height:1.12;letter-spacing:-0.02em;}
+  .sec-head h2 em{font-style:normal;color:var(--green);}
+  .sec-body{max-width:660px;}
+
+  /* Body text */
+  .lead-serif{font-family:var(--serif);font-size:22px;line-height:1.6;color:var(--ink);margin-bottom:24px;}
+  .body-sans{font-size:16.5px;line-height:1.85;color:var(--muted);margin-bottom:22px;}
+  .body-sans:last-child{margin-bottom:0;}
+  .body-sans strong{color:var(--ink);font-weight:600;}
+
+  /* Numbered / lead-in lists */
+  .nlist{margin-top:8px;}
+  .nitem{display:grid;grid-template-columns:30px 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--rule);align-items:start;}
+  .nitem:first-child{border-top:none;padding-top:8px;}
+  .nitem:last-child{padding-bottom:0;}
+  .nitem .n{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--green);line-height:1.2;}
+  .nitem h3{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:-0.01em;margin-bottom:8px;line-height:1.2;}
+  .nitem p{font-size:15.5px;line-height:1.7;color:var(--muted);}
+  .nitem p strong{color:var(--ink);font-weight:600;}
+
+  /* Stat callout */
+  .stat{margin-top:16px;padding-top:14px;border-top:1px solid var(--rule-soft);}
+  .stat .k{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:7px;}
+  .stat .v{font-family:var(--serif);font-size:20px;color:var(--ink);line-height:1.2;}
+  .stat .v em{font-style:italic;color:var(--green);}
+  .stat .pull{font-family:var(--serif);font-style:italic;font-size:15.5px;line-height:1.5;color:var(--ink-soft);margin-top:6px;}
+
+  /* Loop line */
+  .loopline{font-family:var(--serif);font-size:clamp(19px,2.3vw,24px);color:var(--ink);margin:4px 0 8px;line-height:1.6;}
+  .loopline .arr{color:var(--green);font-style:italic;padding:0 3px;}
+
+  /* Context stack */
+  .stack{margin-top:28px;display:flex;flex-direction:column;gap:10px;}
+  .layer{border:1px solid var(--rule);background:#fbfaf6;padding:20px 24px;}
+  .layer.base{border-color:var(--green);background:#f1f5f1;}
+  .layer .lk{font-family:var(--serif);font-size:19px;letter-spacing:-0.01em;color:var(--ink);display:block;margin-bottom:5px;}
+  .layer.base .lk{color:var(--green);}
+  .layer .ld{font-family:var(--sans);font-size:14px;line-height:1.55;color:var(--muted);}
+  .stack-note{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;}
+
+  /* Beliefs old -> new */
+  .beliefs{margin-top:8px;}
+  .brow{padding:26px 0;border-top:1px solid var(--rule);}
+  .brow:first-child{border-top:none;padding-top:8px;}
+  .brow:last-child{padding-bottom:0;}
+  .brow .old{font-family:var(--serif);font-size:21px;line-height:1.3;color:var(--muted);text-decoration:line-through;text-decoration-color:#c4bfae;letter-spacing:-0.01em;margin-bottom:10px;}
+  .brow .newb{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);letter-spacing:-0.01em;}
+  .brow .newb em{font-style:normal;color:var(--ink-soft);}
+
+  /* Worked example questions */
+  .examples{margin-top:8px;}
+  .exrow{display:grid;grid-template-columns:1fr auto;gap:24px;padding:18px 0;border-top:1px solid var(--rule);align-items:baseline;}
+  .exrow:first-child{border-top:none;padding-top:0;}
+  .exrow:last-child{padding-bottom:0;}
+  .exrow .q{font-family:var(--serif);font-size:19px;color:var(--ink);letter-spacing:-0.01em;line-height:1.35;}
+  .exrow .src{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+  @media(max-width:560px){.exrow{grid-template-columns:1fr;gap:6px;}.exrow .src{white-space:normal;}}
+
+  /* Connector flow */
+  .flow{margin-top:8px;}
+  .flow-cap{display:block;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;}
+  .chip{font-family:var(--sans);font-size:13px;color:var(--ink-soft);border:1px solid var(--rule);border-radius:999px;padding:7px 15px;background:#fbfaf6;}
+  .flow-arrow{font-family:var(--serif);font-style:italic;color:var(--green);font-size:22px;margin:16px 0 16px 2px;}
+  .flow-node{border:1px solid var(--green);background:#f1f5f1;border-radius:14px;padding:22px 24px;font-family:var(--serif);font-size:19px;color:var(--green);line-height:1.25;}
+  .flow-node small{display:block;font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-top:8px;letter-spacing:0.03em;line-height:1.6;}
+  .flow-foot{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:24px;}
+
+  /* Quotes */
+  .qitem{padding:36px 0;border-top:1px solid var(--rule);}
+  .qitem:first-child{border-top:none;padding-top:8px;}
+  .qitem:last-child{padding-bottom:0;}
+  .qitem blockquote{font-family:var(--serif);font-size:clamp(21px,2.6vw,27px);line-height:1.42;letter-spacing:-0.01em;color:var(--ink);}
+  .qitem blockquote em{font-style:italic;}
+  .qitem .attr{font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:22px;}
+
+  /* Stages */
+  .stagerow{display:grid;grid-template-columns:104px 1fr;gap:28px;padding:28px 0;border-top:1px solid var(--rule);align-items:baseline;}
+  .stagerow:first-child{border-top:none;padding-top:8px;}
+  .stagerow:last-child{padding-bottom:0;}
+  .stagerow .stg b{display:block;font-family:var(--serif);font-style:italic;font-size:38px;font-weight:400;color:var(--green);line-height:1;margin-bottom:6px;}
+  .stagerow .stg span{font-family:var(--sans);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);}
+  .stagerow h3{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:-0.01em;margin-bottom:7px;}
+  .stagerow.on h3{color:var(--green);}
+  .stagerow p{font-size:15.5px;line-height:1.7;color:var(--muted);}
+  @media(max-width:560px){.stagerow{grid-template-columns:1fr;gap:8px;}}
+
+  /* Note */
+  .note{border:1px solid var(--rule);background:#fbfaf6;padding:32px 34px;}
+  .note p{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--ink-soft);}
+  .note p em{font-style:normal;color:var(--green);}
+
+  /* CTA offers */
+  .offers{margin-top:8px;}
+  .offer{padding:28px 0;border-top:1px solid var(--rule);}
+  .offer:first-child{border-top:none;padding-top:8px;}
+  .offer:last-child{padding-bottom:0;}
+  .offer .ar{color:var(--green);font-size:18px;margin-bottom:12px;}
+  .offer h3{font-family:var(--serif);font-weight:500;font-size:22px;margin-bottom:10px;letter-spacing:-0.01em;}
+  .offer p{font-size:15px;line-height:1.65;color:var(--muted);margin-bottom:16px;}
+  .offer a{font-size:14px;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px;transition:opacity .2s;}
+  .offer a:hover{opacity:.6;}
+
+  footer{border-top:1px solid var(--rule);padding:44px 0 64px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  footer .logo{font-size:18px;}
+  footer p{font-size:13px;color:var(--muted);}
+</style>
+</head>
+<body>
+
+<!-- Clearskies mark (real logo, from clearskies.cc) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="cs-mark" viewBox="0 0 32 32" fill="none"><path d="M14.1538 19.1976C15.9198 20.2172 18.178 19.6121 19.1976 17.8461C20.2172 16.0801 19.6121 13.8219 17.8461 12.8023C16.0801 11.7827 13.8219 12.3878 12.8023 14.1538C11.7827 15.9198 12.3878 18.178 14.1538 19.1976Z" fill="currentColor"/><path d="M17.8461 19.1976C19.6121 18.178 20.2172 15.9198 19.1976 14.1538C18.178 12.3878 15.9198 11.7827 14.1538 12.8023C12.3878 13.8219 11.7827 16.0801 12.8023 17.8461C13.8219 19.6121 16.0801 20.2172 17.8461 19.1976Z" fill="currentColor"/><path d="M19.0769 10.6706C20.2542 11.3503 21.7597 10.9469 22.4394 9.7696C23.1191 8.59227 22.7158 7.08681 21.5384 6.40708C20.3611 5.72734 18.8556 6.13073 18.1759 7.30806C17.4962 8.4854 17.8996 9.99085 19.0769 10.6706Z" fill="currentColor"/><path d="M22.1538 16C22.1538 17.3594 23.2559 18.4615 24.6154 18.4615C25.9748 18.4615 27.0769 17.3594 27.0769 16C27.0769 14.6405 25.9748 13.5384 24.6154 13.5384C23.2559 13.5384 22.1538 14.6405 22.1538 16Z" fill="currentColor"/><path d="M12.923 10.6706C14.1004 9.99085 14.5038 8.4854 13.824 7.30806C13.1443 6.13073 11.6388 5.72734 10.4615 6.40708C9.28418 7.08681 8.88079 8.59227 9.56053 9.7696C10.2403 10.9469 11.7457 11.3503 12.923 10.6706Z" fill="currentColor"/><path d="M10.4615 25.5929C11.6388 26.2726 13.1443 25.8692 13.824 24.6919C14.5038 23.5145 14.1004 22.0091 12.923 21.3294C11.7457 20.6496 10.2403 21.053 9.56052 22.2303C8.88079 23.4077 9.28417 24.9131 10.4615 25.5929Z" fill="currentColor"/><path d="M4.92308 16C4.92308 17.3594 6.02514 18.4615 7.38461 18.4615C8.74408 18.4615 9.84615 17.3594 9.84615 16C9.84615 14.6405 8.74408 13.5384 7.38461 13.5384C6.02514 13.5384 4.92308 14.6405 4.92308 16Z" fill="currentColor"/><path d="M21.5384 25.5929C22.7158 24.9131 23.1192 23.4077 22.4394 22.2303C21.7597 21.053 20.2542 20.6496 19.0769 21.3294C17.8996 22.0091 17.4962 23.5145 18.1759 24.6919C18.8556 25.8692 20.3611 26.2726 21.5384 25.5929Z" fill="currentColor"/><path d="M22.7692 4.27532C23.3579 4.61519 24.1106 4.4135 24.4505 3.82483C24.7903 3.23616 24.5886 2.48344 24 2.14357C23.4113 1.8037 22.6586 2.00539 22.3187 2.59406C21.9788 3.18273 22.1805 3.93546 22.7692 4.27532Z" fill="currentColor"/><path d="M16 2.46154C16.6797 2.46154 17.2307 1.9105 17.2307 1.23077C17.2307 0.551034 16.6797 -8.36308e-09 16 0C15.3202 1.22944e-08 14.7692 0.551034 14.7692 1.23077C14.7692 1.9105 15.3202 2.46154 16 2.46154Z" fill="currentColor"/><path d="M29.5385 16C29.5385 16.6797 30.0895 17.2307 30.7692 17.2307C31.449 17.2307 32 16.6797 32 16C32 15.3202 31.449 14.7692 30.7692 14.7692C30.0895 14.7692 29.5385 15.3202 29.5385 16Z" fill="currentColor"/><path d="M27.7247 9.23073C28.0646 9.8194 28.8173 10.0211 29.406 9.68123C29.9946 9.34136 30.1963 8.58863 29.8564 7.99996C29.5166 7.41129 28.7639 7.2096 28.1752 7.54947C27.5865 7.88934 27.3848 8.64206 27.7247 9.23073Z" fill="currentColor"/><path d="M9.23074 4.27533C9.81941 3.93546 10.0211 3.18273 9.68124 2.59407C9.34137 2.0054 8.58864 1.80371 7.99997 2.14357C7.41131 2.48344 7.20961 3.23617 7.54948 3.82484C7.88935 4.4135 8.64208 4.6152 9.23074 4.27533Z" fill="currentColor"/><path d="M4.27536 9.23077C4.61522 8.64211 4.41353 7.88938 3.82486 7.54951C3.23619 7.20964 2.48347 7.41134 2.1436 8C1.80373 8.58867 2.00543 9.3414 2.59409 9.68126C3.18276 10.0211 3.93549 9.81944 4.27536 9.23077Z" fill="currentColor"/><path d="M7.99997 29.8564C8.58864 30.1962 9.34136 29.9946 9.68123 29.4059C10.0211 28.8172 9.81941 28.0645 9.23074 27.7246C8.64207 27.3848 7.88935 27.5864 7.54948 28.1751C7.20961 28.7638 7.4113 29.5165 7.99997 29.8564Z" fill="currentColor"/><path d="M16 32C16.6797 32 17.2307 31.449 17.2307 30.7692C17.2307 30.0895 16.6797 29.5385 16 29.5385C15.3202 29.5385 14.7692 30.0895 14.7692 30.7692C14.7692 31.449 15.3202 32 16 32Z" fill="currentColor"/><path d="M0 15.9999C-4.63932e-08 16.6797 0.551033 17.2307 1.23077 17.2307C1.9105 17.2307 2.46154 16.6797 2.46154 15.9999C2.46154 15.3202 1.9105 14.7692 1.23077 14.7692C0.551034 14.7692 4.24619e-08 15.3202 0 15.9999Z" fill="currentColor"/><path d="M2.14357 24C2.48344 24.5886 3.23616 24.7903 3.82483 24.4505C4.4135 24.1106 4.61519 23.3579 4.27532 22.7692C3.93546 22.1805 3.18273 21.9788 2.59406 22.3187C2.00539 22.6586 1.8037 23.4113 2.14357 24Z" fill="currentColor"/><path d="M24 29.8564C24.5886 29.5165 24.7903 28.7638 24.4505 28.1751C24.1106 27.5865 23.3579 27.3848 22.7692 27.7246C22.1805 28.0645 21.9788 28.8172 22.3187 29.4059C22.6586 29.9946 23.4113 30.1963 24 29.8564Z" fill="currentColor"/><path d="M29.8564 24C30.1962 23.4113 29.9945 22.6586 29.4059 22.3187C28.8172 21.9789 28.0645 22.1806 27.7246 22.7692C27.3847 23.3579 27.5864 24.1106 28.1751 24.4505C28.7638 24.7904 29.5165 24.5887 29.8564 24Z" fill="currentColor"/></symbol></svg>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><svg class="mark"><use href="#cs-mark"/></svg> Clearskies</div>
+    <div class="nav-links">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#loop">The loop</a>
+      <a href="#connect">Connect</a>
+      <a href="https://calendly.com/pouyan/new-meeting" class="nav-cta">Book a demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="label">The context layer for revenue AI</span>
+    <h1>Selling that <em>compounds.</em></h1>
+    <p class="lede">An AI-native way to run revenue, where every customer interaction makes the next one easier — not harder.</p>
+    <div class="ctas">
+      <a href="https://calendly.com/pouyan/new-meeting" class="btn btn-solid">Run a side-by-side</a>
+      <a href="#philosophy" class="btn btn-out">Read the philosophy</a>
+    </div>
+  </div>
+</header>
+
+<!-- STANDFIRST -->
+<section class="standfirst">
+  <div class="wrap">
+    <div class="inner">
+      <p>Compound selling is the idea that each unit of revenue work should make the next one easier — not harder. Most teams lose what they learn to scattered systems and people's heads. The teams that compound it instead pull ahead a little more every quarter. This is how that works, and what it takes.</p>
+      <div class="meta">Updated June 2026 · Clearskies</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="block" id="philosophy">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">The philosophy</span><h2>Something in your revenue org compounds. <em>Right now it's the wrong thing.</em></h2></div>
+    <div class="sec-body">
+      <p class="lead-serif">Selling runs on context across several layers: who your customers are, how your team sells, and what your best people have learned doing it. Every call, deal, and quarter adds to all three.</p>
+      <p class="body-sans">The problem was never data entry. It's that this context is scattered — across a dozen systems, months of conversations, playbooks no one updates, and judgment that lives in your best people or nowhere at all. It's never assembled and never persists, so none of it compounds. Each quarter the team rebuilds what it already knew. Point AI at that and it reassembles the story from fragments — and its small errors compound into confident, wrong answers.</p>
+      <p class="body-sans">Compound selling flips what compounds. When every layer accumulates somewhere AI can actually use it, a won deal becomes a pattern, a lost one a warning, and a top rep's instinct becomes something the whole team can run. <strong>The compounding asset isn't the deal — it's the context. All of it.</strong></p>
+      <div class="stack">
+        <div class="layer"><span class="lk">What your team can now do</span><span class="ld">Briefs, deal reviews, research, agents — described in plain language, deployed to the team.</span></div>
+        <div class="layer"><span class="lk">How your team sells</span><span class="ld">Your process, stages, methodology, team structure, territories, and product lines — carried into every workflow.</span></div>
+        <div class="layer base"><span class="lk">Who your customers are</span><span class="ld">Every interaction across every source — identity resolved, timelines built, gaps surfaced.</span></div>
+      </div>
+      <p class="stack-note">Three layers. Each feeds the one above it. Most tools have a fraction of the bottom one.</p>
+    </div>
+  </div></div>
+</section>
+
+<!-- VILLAIN -->
+<section class="block">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">What compounds today</span><h2>Without a context layer, the liabilities compound — <em>not the assets.</em></h2></div>
+    <div class="sec-body">
+      <div class="nlist">
+        <div class="nitem"><div class="n">1</div><div>
+          <h3>Errors compound.</h3>
+          <p>Point AI at individual connectors and it gets fragments. It still has to infer which records, calls, and signals belong to the same customer — every query, from scratch.</p>
+          <div class="stat"><span class="k">The math</span><span class="v">95% right <em>×</em> 5 steps <em>=</em> 77%</span><div class="pull">Five mostly-right steps leave nearly one answer in four built on a flawed chain.</div></div>
+        </div></div>
+        <div class="nitem"><div class="n">2</div><div>
+          <h3>Costs compound.</h3>
+          <p>Every prompt spends tokens rebuilding context that should already exist — account history, timelines, call evidence, Slack threads. The next prompt pays the tax again.</p>
+          <div class="stat"><span class="k">Token budget</span><span class="v">~90% <em>context assembly</em></span><div class="pull">When most of a query is just reassembling the picture, you're paying to remember.</div></div>
+        </div></div>
+        <div class="nitem"><div class="n">3</div><div>
+          <h3>Brittleness compounds.</h3>
+          <p>Every MCP server, API path, and schema change becomes infrastructure someone has to babysit. When it breaks, the answer breaks with it.</p>
+          <div class="stat"><span class="k">A real situation</span><span class="v">"Three days of 12-hour days."</span><div class="pull">"Our Salesforce MCP stopped working… and it pulled our VP RevOps off other work."</div></div>
+        </div></div>
+      </div>
+      <p class="body-sans" style="margin-top:32px;">All three get worse the more you scale AI across the team. The one thing that should compound — what your team learns about each customer — is the one thing that doesn't.</p>
+    </div>
+  </div></div>
+</section>
+
+<!-- THE LOOP -->
+<section class="block" id="loop">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">The main loop</span><h2>One loop, run on every account.</h2></div>
+    <div class="sec-body">
+      <p class="lead-serif">A human decides what matters. The system gathers, drafts, and remembers. Each pass leaves the next one easier.</p>
+      <div class="loopline">Research <span class="arr">→</span> prep <span class="arr">→</span> engage <span class="arr">→</span> review <span class="arr">→</span> coach <span class="arr">→</span> compound</div>
+      <div class="nlist">
+        <div class="nitem"><div class="n">1</div><div><h3>Research</h3><p>The full account picture in one question — CRM, calls, email, calendar, Slack — identity resolved and ordered on a single timeline.</p></div></div>
+        <div class="nitem"><div class="n">2</div><div><h3>Prep</h3><p>A brief that pulls from the last three calls, the latest email thread, the CRM notes, and the channel where your AE flagged a concern yesterday. Not one source. All of them.</p></div></div>
+        <div class="nitem"><div class="n">3</div><div><h3>Engage</h3><p>The rep runs the meeting with complete context in hand — every open item, every relationship, every signal from the last touch.</p></div></div>
+        <div class="nitem"><div class="n">4</div><div><h3>Review</h3><p>Pipeline and deal health graded against what's actually happening across every channel — not just what got typed into the CRM. The number, and the story behind it.</p></div></div>
+        <div class="nitem"><div class="n">5</div><div><h3>Coach</h3><p>Coaching moments with timestamps from real calls, tied to outcomes. The best playbook spreads instead of staying in one head.</p></div></div>
+        <div class="nitem"><div class="n">6</div><div><h3>Compound</h3><p>The step most teams skip. What the system surfaces this week gets logged. Next week it references it. Trends emerge. Each cycle sharpens the next.</p></div></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- WHAT BECOMES POSSIBLE -->
+<section class="block">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">What becomes possible</span><h2>When context compounds, the work on top <em>earns trust.</em></h2></div>
+    <div class="sec-body">
+      <div class="nlist">
+        <div class="nitem"><div class="n">1</div><div><h3>Revenue deep research</h3><p>Why you win, why you lose, which objections cost deals — across months of calls, emails, and outcomes. Not a hunch. The pattern.</p></div></div>
+        <div class="nitem"><div class="n">2</div><div><h3>Call prep in seconds</h3><p>Deal history, recent emails, Slack threads, last-call highlights, open items — in one view, before every meeting.</p></div></div>
+        <div class="nitem"><div class="n">3</div><div><h3>Deals going quiet</h3><p>Real silence detection across every channel. Champion dark for two weeks? You'll know before the deal slips.</p></div></div>
+        <div class="nitem"><div class="n">4</div><div><h3>Honest coaching</h3><p>Coaching moments pulled from actual calls and tied to outcomes. Evidence, not rep self-reporting.</p></div></div>
+        <div class="nitem"><div class="n">5</div><div><h3>A CRM that stays honest</h3><p>Fields updated after every interaction, the way you define them. No end-of-quarter cleanup.</p></div></div>
+        <div class="nitem"><div class="n">6</div><div><h3>Qualification that's real</h3><p>MEDDPICC, SPICED, or your own — scored from actual signals across calls and email, not what the rep typed.</p></div></div>
+      </div>
+      <p class="body-sans" style="margin-top:40px;margin-bottom:16px;"><strong>One question, every source.</strong> Ask in plain language; the answer is assembled from whatever it touches:</p>
+      <div class="examples">
+        <div class="exrow"><span class="q">"Prep me for my 2 p.m. with Northwind."</span><span class="src">Calendar · Gong · Salesforce · Email</span></div>
+        <div class="exrow"><span class="q">"Which deals went quiet this week?"</span><span class="src">Salesforce · Email · Slack · Calendar</span></div>
+        <div class="exrow"><span class="q">"Why did we lose Contoso?"</span><span class="src">Gong · Salesforce · Email · Slack</span></div>
+        <div class="exrow"><span class="q">"What's our win rate by competitor this quarter?"</span><span class="src">Salesforce · Gong</span></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- CONNECT -->
+<section class="block" id="connect">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">One connection, every source</span><h2>Connect once. <em>Build anywhere.</em></h2></div>
+    <div class="sec-body">
+      <p class="lead-serif">Your systems connect in minutes — no custom engineering, no field mapping. Clearskies resolves identities, maps activities, and builds timelines underneath. Every AI tool works from the same picture.</p>
+      <div class="flow">
+        <span class="flow-cap">Your sources</span>
+        <div class="chips">
+          <span class="chip">Salesforce</span><span class="chip">HubSpot</span><span class="chip">Gong</span><span class="chip">Fathom</span><span class="chip">Gmail</span><span class="chip">Outlook</span><span class="chip">Google Calendar</span><span class="chip">Slack</span><span class="chip">Linear</span><span class="chip">Pylon</span><span class="chip">Scratchpad</span>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node">Clearskies context layer<small>Records unified · identities resolved · timelines built</small></div>
+        <div class="flow-arrow">↓</div>
+        <span class="flow-cap">Any AI</span>
+        <div class="chips"><span class="chip">Claude</span><span class="chip">ChatGPT</span><span class="chip">Internal agents</span></div>
+        <p class="flow-foot">One connection. Model-agnostic. Your data stays yours — no extraction fees, no lock-in.</p>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- BELIEFS -->
+<section class="block">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">What changes</span><h2>Five beliefs to retire.</h2></div>
+    <div class="sec-body">
+      <div class="beliefs">
+        <div class="brow"><p class="old">The problem is data entry.</p><p class="newb">It never was. <em>It's fragmentation — context spread across systems, conversations, and months that nothing ever assembles. No amount of typing fixes that.</em></p></div>
+        <div class="brow"><p class="old">Customer data is the context.</p><p class="newb">It's one layer. <em>How your team sells and what it has learned matter just as much — and live in even fewer places than the customer data does.</em></p></div>
+        <div class="brow"><p class="old">Connect more tools and AI gets smarter.</p><p class="newb">Five connectors give five fragments. <em>Access isn't intelligence. The model still guesses how they fit — and pays for it every query.</em></p></div>
+        <div class="brow"><p class="old">Every answer is built from scratch.</p><p class="newb">Resolve the layers once. <em>Then every brief, review, and analysis starts from the full picture instead of rebuilding it.</em></p></div>
+        <div class="brow"><p class="old">AI for sales means a chatbot.</p><p class="newb">Fast answers from fragments erode trust. <em>The goal is AI reliable enough to deploy to the team — that cites its sources and flags what's missing.</em></p></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- PROOF -->
+<section class="block">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">In practice</span><h2>What it looks like for the teams already doing it.</h2></div>
+    <div class="sec-body">
+      <div class="qitem">
+        <blockquote>"Claude is generating the document and Clearskies is the context layer that's empowering the final result. <em>You guys are knocking on the door of what next looks like.</em>"</blockquote>
+        <div class="attr">— CRO, Respark</div>
+      </div>
+      <div class="qitem">
+        <blockquote>"I have Clearskies MCP connected to Claude which also connects into Amplitude, M365, and Atlassian. I'm running daily and weekly CEO briefs on sales, competition, product sentiment, customer success, and customer health. <em>I'm getting a level of insight that would have been impossible or massively labor intensive before.</em>"</blockquote>
+        <div class="attr">— Jake Olsen, CEO at Stratus</div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- STAGES -->
+<section class="block" id="stages">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">Getting started</span><h2>Where is your team on the ladder?</h2></div>
+    <div class="sec-body">
+      <p class="lead-serif">You don't adopt compound selling overnight. Each rung builds the habits the next one needs.</p>
+      <div class="stagerow"><div class="stg"><b>0</b><span>Manual</span></div><div><h3>Four tabs for one answer</h3><p>To understand a single account, someone opens the CRM, the call recorder, their inbox, and Slack — and stitches it together by hand. Most days, no one has time.</p></div></div>
+      <div class="stagerow"><div class="stg"><b>1</b><span>Ad hoc AI</span></div><div><h3>AI on one tool at a time</h3><p>The team uses AI connected to the CRM, or to call recordings. Helpful for one-off questions, but it answers from a fragment and can't be trusted for the whole picture.</p></div></div>
+      <div class="stagerow on"><div class="stg"><b>2</b><span>Unified</span></div><div><h3>One complete picture, any AI</h3><p>Every source connected, identities resolved, timelines built. Your AI answers from the full account — reliable enough to put in front of the team. Compounding begins here.</p></div></div>
+      <div class="stagerow"><div class="stg"><b>3</b><span>Process-aware</span></div><div><h3>The system knows how you sell</h3><p>Your methodology and definition of "good" are baked in. Deal grades, risk alerts, and coaching reflect your process — not a generic one.</p></div></div>
+      <div class="stagerow"><div class="stg"><b>4</b><span>Compounding</span></div><div><h3>Insights that build on each other</h3><p>What the system surfaces gets logged and referenced. Patterns across won and lost deals emerge. Every cycle sharpens the next — across the whole team.</p></div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- CAVEAT -->
+<section class="block">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">One honest caveat</span><h2>Not everything in revenue compounds.</h2></div>
+    <div class="sec-body">
+      <div class="note">
+        <p>A deal can be run perfectly and lost to a budget freeze, or fumbled and won because a competitor stumbled — so no single outcome proves a pattern. What compounds is the <em>context</em>: the account knowledge, the objection patterns, the picture of how your team actually sells. Build the layer that captures that, and the judgment gets better even when any one deal doesn't.</p>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- CTA -->
+<section class="block">
+  <div class="wrap"><div class="sec">
+    <div class="sec-head"><span class="label">Get started</span><h2>See the complete picture for your data.</h2></div>
+    <div class="sec-body">
+      <div class="offers">
+        <div class="offer"><div class="ar">→</div><h3>Run a side-by-side</h3><p>Bring one workflow or one hard question you don't fully trust today. We compare it against Clearskies working from complete context.</p><a href="https://calendly.com/pouyan/new-meeting">Book side-by-side</a></div>
+        <div class="offer"><div class="ar">→</div><h3>Start building</h3><p>Connect your data and start building with complete revenue context. Works with Claude, ChatGPT, and more.</p><a href="https://app.clearskies.cc">Get started</a></div>
+        <div class="offer"><div class="ar">→</div><h3>Build with us</h3><p>We scope, build, and iterate alongside your team. Same platform, same ownership — we just help you get there faster.</p><a href="https://calendly.com/pouyan/new-meeting">Get in touch</a></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><svg class="mark"><use href="#cs-mark"/></svg> Clearskies</div>
+    <p>The context layer for revenue AI. Built by the team behind Scratchpad.</p>
+  </div>
+</footer>
+
+</body>
+</html>
